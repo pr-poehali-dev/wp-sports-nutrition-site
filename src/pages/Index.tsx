@@ -166,7 +166,7 @@ export default function Index() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#f9f9f7]/95 backdrop-blur border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
           <button onClick={() => scrollTo("home")} className="font-['Oswald'] text-xl font-bold tracking-widest uppercase">
-            PRO<span className="text-orange-500">NUTRITION</span>
+            PRO<span className="text-gray-400">NUTRITION</span>
           </button>
           <nav className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
@@ -205,7 +205,7 @@ export default function Index() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
           <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-20 max-w-6xl mx-auto">
             <div className="animate-slide-up">
-              <p className="text-orange-400 text-xs font-semibold tracking-[0.25em] uppercase mb-4">Спортивное питание</p>
+              <p className="text-gray-400 text-xs font-semibold tracking-[0.25em] uppercase mb-4">Спортивное питание</p>
               <h1 className="font-['Oswald'] text-5xl md:text-7xl font-bold text-white leading-none mb-6 uppercase tracking-tight">
                 Питание<br />для<br />результата
               </h1>
@@ -215,7 +215,7 @@ export default function Index() {
               <div className="flex flex-wrap gap-3">
                 <button
                   onClick={() => scrollTo("catalog")}
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-7 py-3 text-sm font-semibold uppercase tracking-widest transition-colors"
+                  className="bg-gray-400 hover:bg-gray-500 text-white px-7 py-3 text-sm font-semibold uppercase tracking-widest transition-colors"
                 >
                   Смотреть каталог
                 </button>
@@ -236,7 +236,7 @@ export default function Index() {
                 { value: "1200+", label: "Отзывов" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <div className="font-['Oswald'] text-xl md:text-2xl font-bold text-orange-400">{stat.value}</div>
+                  <div className="font-['Oswald'] text-xl md:text-2xl font-bold text-gray-300">{stat.value}</div>
                   <div className="text-gray-400 text-xs uppercase tracking-wide">{stat.label}</div>
                 </div>
               ))}
@@ -248,7 +248,7 @@ export default function Index() {
       {/* CATALOG */}
       <section id="catalog" className="py-20 max-w-6xl mx-auto px-4">
         <div className="mb-10">
-          <p className="text-orange-500 text-xs font-semibold tracking-[0.25em] uppercase mb-2">Ассортимент</p>
+          <p className="text-gray-500 text-xs font-semibold tracking-[0.25em] uppercase mb-2">Ассортимент</p>
           <h2 className="font-['Oswald'] text-4xl md:text-5xl font-bold uppercase mb-6">Каталог продуктов</h2>
           <div className="flex flex-wrap gap-2">
             {CATEGORIES.map((cat) => (
@@ -276,13 +276,13 @@ export default function Index() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 {product.tag && (
-                  <span className="absolute top-3 left-3 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1">
+                  <span className="absolute top-3 left-3 bg-gray-700 text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1">
                     {product.tag}
                   </span>
                 )}
               </div>
               <div className="p-5">
-                <p className="text-orange-500 text-[10px] font-semibold uppercase tracking-widest mb-1">{product.category}</p>
+                <p className="text-gray-400 text-[10px] font-semibold uppercase tracking-widest mb-1">{product.category}</p>
                 <h3 className="font-['Oswald'] text-lg font-semibold uppercase tracking-wide mb-2">{product.name}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-3">{product.description}</p>
                 <div className="flex items-center gap-2 mb-4">
@@ -295,7 +295,7 @@ export default function Index() {
                     <span className="font-['Oswald'] text-xl font-bold">{product.price}</span>
                     <span className="text-gray-400 text-xs ml-2">/ {product.weight}</span>
                   </div>
-                  <button className="bg-[#141414] hover:bg-orange-500 text-white text-xs font-bold uppercase tracking-widest px-4 py-2 transition-colors">
+                  <button className="bg-[#141414] hover:bg-gray-600 text-white text-xs font-bold uppercase tracking-widest px-4 py-2 transition-colors">
                     Подробнее
                   </button>
                 </div>
@@ -308,7 +308,7 @@ export default function Index() {
       {/* TABLES */}
       <section id="tables" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <p className="text-orange-500 text-xs font-semibold tracking-[0.25em] uppercase mb-2">Данные</p>
+          <p className="text-gray-500 text-xs font-semibold tracking-[0.25em] uppercase mb-2">Данные</p>
           <h2 className="font-['Oswald'] text-4xl md:text-5xl font-bold uppercase mb-2">Характеристики продуктов</h2>
           <p className="text-gray-400 text-sm mb-8">Состав на одну порцию</p>
           <div className="overflow-x-auto border border-gray-100">
@@ -326,7 +326,7 @@ export default function Index() {
               </thead>
               <tbody>
                 {TABLE_DATA.map((row, i) => (
-                  <tr key={row.name} className={`border-b border-gray-100 hover:bg-orange-50 transition-colors ${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}>
+                  <tr key={row.name} className={`border-b border-gray-100 hover:bg-gray-50 transition-colors ${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}>
                     <td className="px-4 py-3 font-semibold text-gray-800">{row.name}</td>
                     <td className="px-4 py-3 text-center">
                       <span className={`font-semibold ${row.protein > 10 ? "text-green-600" : "text-gray-500"}`}>{row.protein}</span>
@@ -351,7 +351,7 @@ export default function Index() {
                   <div className="w-44 text-xs font-medium text-gray-600 truncate shrink-0">{row.name}</div>
                   <div className="flex-1 bg-gray-100 h-6 relative overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-orange-500 to-orange-400 flex items-center justify-end pr-2"
+                      className="h-full bg-gradient-to-r from-gray-600 to-gray-500 flex items-center justify-end pr-2"
                       style={{ width: `${Math.min((row.protein / 50) * 100, 100)}%` }}
                     >
                       <span className="text-white text-[11px] font-bold">{row.protein}г</span>
@@ -366,20 +366,20 @@ export default function Index() {
 
       {/* FAQ */}
       <section id="faq" className="py-20 max-w-6xl mx-auto px-4">
-        <p className="text-orange-500 text-xs font-semibold tracking-[0.25em] uppercase mb-2">Вопросы и ответы</p>
+        <p className="text-gray-500 text-xs font-semibold tracking-[0.25em] uppercase mb-2">Вопросы и ответы</p>
         <h2 className="font-['Oswald'] text-4xl md:text-5xl font-bold uppercase mb-10">Часто задаваемые вопросы</h2>
         <div className="divide-y divide-gray-100">
           {FAQ_DATA.map((item, i) => (
             <div key={i}>
               <button
-                className="w-full text-left py-5 flex items-center justify-between gap-4 hover:text-orange-500 transition-colors"
+                className="w-full text-left py-5 flex items-center justify-between gap-4 hover:text-gray-600 transition-colors"
                 onClick={() => setOpenFaq(openFaq === i ? null : i)}
               >
                 <span className="font-['Oswald'] text-lg font-semibold uppercase tracking-wide">{item.q}</span>
                 <Icon
                   name={openFaq === i ? "Minus" : "Plus"}
                   size={18}
-                  className={`shrink-0 transition-colors ${openFaq === i ? "text-orange-500" : "text-gray-400"}`}
+                  className={`shrink-0 transition-colors ${openFaq === i ? "text-gray-700" : "text-gray-400"}`}
                 />
               </button>
               {openFaq === i && (
@@ -396,7 +396,7 @@ export default function Index() {
       <section id="contacts" className="py-20 bg-[#141414] text-white">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-16">
           <div>
-            <p className="text-orange-400 text-xs font-semibold tracking-[0.25em] uppercase mb-2">Связаться с нами</p>
+            <p className="text-gray-400 text-xs font-semibold tracking-[0.25em] uppercase mb-2">Связаться с нами</p>
             <h2 className="font-['Oswald'] text-4xl md:text-5xl font-bold uppercase mb-6">Обратная связь</h2>
             <p className="text-gray-400 leading-relaxed mb-8">
               Есть вопросы по продуктам, доставке или хотите оставить отзыв? Напишите нам — ответим в течение одного рабочего дня.
@@ -408,7 +408,7 @@ export default function Index() {
                 { icon: "MapPin", label: "Москва, ул. Спортивная, 12" },
               ].map((contact) => (
                 <div key={contact.label} className="flex items-center gap-3 text-gray-300">
-                  <Icon name={contact.icon} size={16} className="text-orange-400 shrink-0" fallback="CircleAlert" />
+                  <Icon name={contact.icon} size={16} className="text-gray-400 shrink-0" fallback="CircleAlert" />
                   <span className="text-sm">{contact.label}</span>
                 </div>
               ))}
@@ -418,12 +418,12 @@ export default function Index() {
           <div>
             {formSent ? (
               <div className="flex flex-col items-center justify-center h-full text-center py-12 animate-fade-in">
-                <div className="w-14 h-14 rounded-full bg-orange-500/20 flex items-center justify-center mb-4">
-                  <Icon name="Check" size={28} className="text-orange-400" />
+                <div className="w-14 h-14 rounded-full bg-gray-500/20 flex items-center justify-center mb-4">
+                  <Icon name="Check" size={28} className="text-gray-300" />
                 </div>
                 <h3 className="font-['Oswald'] text-2xl font-bold uppercase mb-2">Сообщение отправлено!</h3>
                 <p className="text-gray-400 text-sm">Мы свяжемся с вами в ближайшее время.</p>
-                <button onClick={() => setFormSent(false)} className="mt-6 text-orange-400 text-sm underline">
+                <button onClick={() => setFormSent(false)} className="mt-6 text-gray-400 text-sm underline">
                   Отправить ещё
                 </button>
               </div>
@@ -437,7 +437,7 @@ export default function Index() {
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     placeholder="Иван Иванов"
-                    className="w-full bg-white/5 border border-white/10 focus:border-orange-500 text-white placeholder-gray-600 px-4 py-3 text-sm outline-none transition-colors"
+                    className="w-full bg-white/5 border border-white/10 focus:border-gray-400 text-white placeholder-gray-600 px-4 py-3 text-sm outline-none transition-colors"
                   />
                 </div>
                 <div>
@@ -448,7 +448,7 @@ export default function Index() {
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     placeholder="ivan@email.ru"
-                    className="w-full bg-white/5 border border-white/10 focus:border-orange-500 text-white placeholder-gray-600 px-4 py-3 text-sm outline-none transition-colors"
+                    className="w-full bg-white/5 border border-white/10 focus:border-gray-400 text-white placeholder-gray-600 px-4 py-3 text-sm outline-none transition-colors"
                   />
                 </div>
                 <div>
@@ -459,12 +459,12 @@ export default function Index() {
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     placeholder="Ваш вопрос или отзыв..."
-                    className="w-full bg-white/5 border border-white/10 focus:border-orange-500 text-white placeholder-gray-600 px-4 py-3 text-sm outline-none transition-colors resize-none"
+                    className="w-full bg-white/5 border border-white/10 focus:border-gray-400 text-white placeholder-gray-600 px-4 py-3 text-sm outline-none transition-colors resize-none"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase tracking-widest py-3 text-sm transition-colors"
+                  className="w-full bg-gray-600 hover:bg-gray-700 text-white font-bold uppercase tracking-widest py-3 text-sm transition-colors"
                 >
                   Отправить сообщение
                 </button>
@@ -478,7 +478,7 @@ export default function Index() {
       <footer className="bg-black text-gray-500 py-8">
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
           <span className="font-['Oswald'] text-white text-lg font-bold tracking-widest uppercase">
-            PRO<span className="text-orange-500">NUTRITION</span>
+            PRO<span className="text-gray-400">NUTRITION</span>
           </span>
           <span>© 2026 ProNutrition. Все права защищены.</span>
           <div className="flex gap-6">
